@@ -1,12 +1,47 @@
 <resources>
     <string name="app_name">WarpXMobile</string>
+    <string name="actionbar_entranceGate">Entrance Gate</string>
+    <string name="actionbar_exitGate">Exit Gate</string>
+
     <!-- Strings related to login -->
     <string name="prompt_email">Email</string>
     <string name="prompt_password">Password</string>
     <string name="action_sign_in">Sign in or register</string>
     <string name="action_sign_in_short">Sign in</string>
-    <string name="welcome">"Welcome !"</string>
+    <string name="welcome">"Welcome!"</string>
     <string name="invalid_username">Not a valid username</string>
-    <string name="invalid_password">Password must be >5 characters</string>
+    <string name="invalid_password">Password must be >4 characters</string>
     <string name="login_failed">"Login failed"</string>
+
+    <!-- Entrance/ExitActivity Strings -->
+    <string name="bt_readCard">Read Card</string>
+    <string name="incorrect_swipe">Swipe Again</string>
+    <string name="multiple_card">Too many cards nearby</string>
+    <string name="bt_emergency">Emergency Open</string>
+
+    <!-- MainActivity Strings -->
+    <string name="bt_entranceGate">Entrance Gate</string>
+    <string name="bt_exitGate">Exit Gate</string>
+    <string name="bt_checkCard">Check Card</string>
+    <string name="bt_lostCard">Lost Card</string>
+    <string name="bt_openGate">Open Gate</string>
+    <string name="bt_settings">Settings</string>
+    <string name="bt_back">Back</string>
+
+    <!-- SettingsActivity Strings -->
+    <string name="bt_save">Save</string>
+    <string name="hint_server_address">Server Address</string>
+    <string name="hint_site">Site</string>
+    <string name="hint_location">Location</string>
+    <string name="hint_gate_id">Gate ID</string>
+    <string name="blank_setting">The settings needs to be filled in before proceeding</string>
+    <string name="preference_server_address">SERVER_ADDRESS</string>
+    <string name="preference_site">SITE</string>
+    <string name="preference_location">LOCATION</string>
+    <string name="preference_gate_id">GATE_ID</string>
+
+    <!-- OpenGateActivity Strings -->
+    <string name="hint_reason">Reason</string>
+    <string name="hint_licenseplate">License Plate</string>
+    <string name="hint_cardid">Card ID</string>
 </resources>
