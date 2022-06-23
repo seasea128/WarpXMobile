@@ -16,7 +16,7 @@
         android:theme="@style/Theme.WarpXMobile"
         tools:targetApi="31">
         <activity
-            android:name=".ui.LoginActivity"
+            android:name=".ui.LoginActivity2"
             android:exported="false" />
         <activity
             android:name=".ui.SiteActivity"
