@@ -52,6 +52,12 @@ class MainActivity : AppCompatActivity() {
         findViewById<Button>(R.id.bt_openGate).setOnClickListener {
             startActivity(Intent(this,OpenGateActivity::class.java))
         }
+        findViewById<Button>(R.id.bt_lostCard).setOnClickListener {
+            startActivity(Intent(this, LostCardActivity::class.java))
+        }
+        findViewById<Button>(R.id.bt_logout).setOnClickListener {
+            finish()
+        }
     }
 
 }
