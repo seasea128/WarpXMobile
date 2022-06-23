@@ -30,9 +30,78 @@
         android:id="@+id/bt_readCard_exit"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="64dp"
         android:text="@string/bt_readCard"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/image_left_exit"
+        android:layout_width="175dp"
+        android:layout_height="175dp"
+        android:importantForAccessibility="no"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toStartOf="@+id/image_right_exit"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/image_right_exit"
+        tools:srcCompat="@tools:sample/avatars"
+        tools:visibility="visible" />
+
+    <ImageView
+        android:id="@+id/image_right_exit"
+        android:layout_width="175dp"
+        android:layout_height="175dp"
+        android:layout_marginTop="16dp"
+        android:importantForAccessibility="no"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/image_left_exit"
+        app:layout_constraintTop_toBottomOf="@+id/text_uid_exit"
+        tools:srcCompat="@tools:sample/avatars"
+        tools:visibility="visible" />
+
+    <TextView
+        android:id="@+id/text_card_number_exit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        app:layout_constraintStart_toStartOf="@+id/image_left_exit"
+        app:layout_constraintTop_toBottomOf="@+id/image_left_exit"
+        tools:text="Member Card: {cardID}" />
+
+    <TextView
+        android:id="@+id/text_time_exit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toStartOf="@+id/text_card_number_exit"
+        app:layout_constraintTop_toBottomOf="@+id/text_card_number_exit"
+        tools:text="Entrance Time: {Time}" />
+
+    <Button
+        android:id="@+id/bt_paybycash_exit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="32dp"
+        android:enabled="false"
+        android:text="@string/bt_pay_by_cash_exit"
+        app:layout_constraintBottom_toTopOf="@+id/bt_back_exitGate"
+        app:layout_constraintEnd_toStartOf="@+id/bt_paybyqr_exit"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/bt_paybyqr_exit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:enabled="false"
+        android:text="@string/bt_pay_by_qr_exit"
+        app:layout_constraintBottom_toBottomOf="@+id/bt_paybycash_exit"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/bt_paybycash_exit" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

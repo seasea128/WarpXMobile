@@ -20,7 +20,7 @@
         android:id="@+id/bt_readCard_entrance"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="144dp"
+        android:layout_marginTop="64dp"
         android:text="@string/bt_readCard"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -38,10 +38,10 @@
 
     <ImageView
         android:id="@+id/image_left_entrance"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:visibility="invisible"
+        android:layout_width="175dp"
+        android:layout_height="175dp"
         android:importantForAccessibility="no"
+        android:visibility="invisible"
         app:layout_constraintEnd_toStartOf="@+id/image_right_entrance"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
@@ -52,8 +52,8 @@
 
     <ImageView
         android:id="@+id/image_right_entrance"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="175dp"
+        android:layout_height="175dp"
         android:layout_marginTop="16dp"
         android:importantForAccessibility="no"
         android:visibility="invisible"
@@ -86,10 +86,10 @@
         android:id="@+id/bt_emergency_entrance"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
         android:text="@string/bt_emergency"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/text_time_entrance" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
