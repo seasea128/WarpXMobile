@@ -2,22 +2,15 @@ package com.example.warpxmobile.ui
 
 import android.content.Context
 import android.content.Intent
-import android.content.SharedPreferences
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
-import androidx.core.content.ContextCompat.startActivity
+import androidx.appcompat.app.AppCompatActivity
 import com.example.warpxmobile.R
 import com.example.warpxmobile.utils.Settings
-import com.example.warpxmobile.utils.Settings.Companion.GATE_ID
 import com.example.warpxmobile.utils.Settings.Companion.PREFERENCE
-import com.example.warpxmobile.utils.Settings.Companion.SERVER_ADDRESS
-import com.example.warpxmobile.utils.Settings.Companion.SHAREDPREFERENCE
-import com.example.warpxmobile.utils.Settings.Companion.SITE
 
 
 class MainActivity : AppCompatActivity() {
-    //TODO: Need to get strings from saved
 
     private val sharedPreferences by lazy {
         this.getSharedPreferences(PREFERENCE, Context.MODE_PRIVATE)
@@ -32,11 +25,23 @@ class MainActivity : AppCompatActivity() {
         setListener()
     }
 
-    fun loadSettings() {
-        Settings.SERVER_ADDRESS = sharedPreferences.getString(getString(R.string.preference_server_address), "").toString()
-        Settings.SITE = sharedPreferences.getString(getString(R.string.preference_site), "").toString()
-        Settings.LOCATION = sharedPreferences.getString(getString(R.string.preference_location), "").toString()
-        Settings.GATE_ID = sharedPreferences.getString(getString(R.string.preference_gate_id), "").toString()
+    private fun loadSettings() {
+        Settings.SERVER_ADDRESS =
+            sharedPreferences.getString(getString(R.string.preference_server_address), "")
+                .toString()
+        Settings.SERVER_PORT =
+            sharedPreferences.getString(getString(R.string.preference_server_port), "").toString()
+        Settings.SITE =
+            sharedPreferences.getString(getString(R.string.preference_site), "").toString()
+        Settings.LOCATION =
+            sharedPreferences.getString(getString(R.string.preference_location), "").toString()
+        Settings.GATE_ID =
+            sharedPreferences.getString(getString(R.string.preference_gate_id), "").toString()
+        Settings.FTP_PASSWORD =
+            sharedPreferences.getString(getString(R.string.preference_ftp_password), "").toString()
+        Settings.FTP_USERNAME =
+            sharedPreferences.getString(getString(R.string.preference_ftp_username), "").toString()
+        Settings.FTP_PORT = sharedPreferences.getInt(getString(R.string.preference_ftp_port), 21)
     }
 
     private fun setListener() {
@@ -47,10 +52,12 @@ class MainActivity : AppCompatActivity() {
             startActivity(Intent(this, ExitActivity::class.java))
         }
         findViewById<Button>(R.id.bt_settings).setOnClickListener {
-            startActivity(Intent(this, SettingsActivity::class.java))
+            val intent = Intent(this,LoginActivity2::class.java)
+                .putExtra("Settings", true)
+            startActivity(intent)
         }
         findViewById<Button>(R.id.bt_openGate).setOnClickListener {
-            startActivity(Intent(this,OpenGateActivity::class.java))
+            startActivity(Intent(this, OpenGateActivity::class.java))
         }
         findViewById<Button>(R.id.bt_lostCard).setOnClickListener {
             startActivity(Intent(this, LostCardActivity::class.java))

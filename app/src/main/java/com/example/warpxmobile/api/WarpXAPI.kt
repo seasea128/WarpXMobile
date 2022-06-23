@@ -34,4 +34,7 @@ interface WarpXAPI {
 
     @POST
     suspend fun postOpenGate(@Url url: String, @Body openGateRequest: OpenGateRequest): Response<OpenGateResponse>
+
+    @POST
+    suspend fun getToken(@Url url:String, @Body getTokenRequest: GetTokenRequest): Response<GetTokenResponse>
 }

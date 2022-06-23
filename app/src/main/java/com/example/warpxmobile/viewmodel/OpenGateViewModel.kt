@@ -31,7 +31,7 @@ class OpenGateViewModel : ViewModel() {
         viewModelScope.launch {
             try {
                 openGateResponse.value = RetrofitInstance.api.postOpenGate(
-                    "http://${Settings.SERVER_ADDRESS}/service/openGate",
+                    "${Settings.getURI()}/service/openGate",
                     request
                 )
             } catch (e: Exception) {
